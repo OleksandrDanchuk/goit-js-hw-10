@@ -1,12 +1,13 @@
 export function renderListCountries(array) {
   return array
     .map(({ flags: { svg }, name: { official } }) => {
-      return `<li><img src=${svg} alt='flag' width=20> ${official}</li>`;
+      return `<li>
+        <img src=${svg} alt='flag' width=20> ${official}</li>`;
     })
     .join('');
 }
 
-export function renderCountry(array) {
+export function rendercountry(array) {
   const language = Object.values(array[0].languages).join(', ');
   return array
     .map(({ flags: { svg }, name: { official }, capital, population }) => {
